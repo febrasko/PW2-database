@@ -1,6 +1,6 @@
 <?php
 
-class Sql
+Class Sql
 {
     private $conn;
     private function getConn() {
@@ -16,8 +16,8 @@ class Sql
 
     /* Inserindo os dados de conexão de forma que possam ser editados
     facilmente na array $database 
-    (Por algum motivo só é possível criar um objeto PDO dentro da função 
-    construtora 🤷‍♀️)*/
+    (Por algum motivo só é possível criar um objeto PDO dentro do método 
+    construtor 🤷‍♀️)*/
     public function __construct(){
         $this->conn = new PDO(
             "mysql:host=" . $this->database['host'] . ";".

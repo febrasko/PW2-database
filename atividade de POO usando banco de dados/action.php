@@ -26,7 +26,7 @@ if ($post->get('email') != '' && $post->get('pass') != '') {
     }
 } else if ($session->get('email') != '') {
     foreach ($users as $user => $info) {
-        if ($session->get('email') == $info['password'] && $session->get('pass') == $info['pass']) {
+        if ($session->get('email') == $info['email'] && $session->get('pass') == $info['password']) {
             $isLogged = true;
             require_once 'info.php';
             break;
